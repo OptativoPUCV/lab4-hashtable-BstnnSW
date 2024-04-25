@@ -105,12 +105,12 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {
   int pos = hash(key, map->capacity);
 
-  // Avanza hasta que las llaves coincidan o llega a una casilla NULL
+  
   while (map->buckets[pos] != NULL && strcmp(map->buckets[pos]->key, key) != 0) 
   {
     pos = (pos + 1) % map->capacity;
   }
-  // Si llega a una casilla NULL significa que no esta en la lista, devuelve NULL
+  
   if (map->buckets[pos] == NULL)
     return NULL;
 
@@ -135,7 +135,15 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-  
+  int pos = (map->current + 1) % map->capacity;
 
-    return NULL;
+  while (pos != map->current) {
+    if (map->buckets[pos] != NULL || map->buckets[pos]->key != NULL) {
+      map->current = pos;
+      return map->buckets[pos];
+    }
+    pos = (pos + 1) % map->capacity;
+  }
+
+  return NULL;
 }
