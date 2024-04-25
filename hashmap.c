@@ -144,6 +144,6 @@ Pair * nextMap(HashMap * map) {
     }
     pos = (pos + 1) % map->capacity;
   }
-
+  map->current = -1
   return NULL;
 }

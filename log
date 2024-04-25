@@ -57,3 +57,20 @@ Thu 25 Apr 2024 03:46:04 PM UTC:
  tests:  16|1
 total_score: 60/70
 09286ee
+Thu 25 Apr 2024 03:54:52 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:147:20: error: expected ‘;’ before ‘return’
+  147 |   map->current = -1
+      |                    ^
+      |                    ;
+  148 |   return NULL;
+      |   ~~~~~~            
+hashmap.c:149:1: error: control reaches end of non-void function [-Werror=return-type]
+  149 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4fd00ca
