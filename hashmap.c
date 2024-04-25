@@ -152,5 +152,5 @@ Pair * nextMap(HashMap * map) {
   if (!found) {
     return NULL;
   }
-  
+  return NULL;
 }
