@@ -137,20 +137,13 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
   
   int pos = (map->current + 1) % map->capacity;
-  int found = 0;
 
   while (pos != map->current) {
     if (map->buckets[pos] != NULL && map->buckets[pos]->key != NULL) {
       map->current = pos;
-      found = 1;
       return map->buckets[pos];
     }
     pos = (pos + 1) % map->capacity;
   }
-  
-  map->current = -1;
-  if (!found) {
-    return NULL;
-  }
-  return NULL;
+ return NULL; 
 }
