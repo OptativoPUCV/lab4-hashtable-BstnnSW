@@ -135,9 +135,10 @@ Pair *nextMap(HashMap *map) {
       map->current = pos;
       return map->buckets[pos];
     }
-    if ((pos + 1) >= map->capacity)
+    if ((pos + 1) >= map->capacity){
       map->current = pos;
       return NULL;
+    }
     pos = (pos + 1) % map->capacity;
   }
   return NULL;
