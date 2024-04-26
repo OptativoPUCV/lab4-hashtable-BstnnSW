@@ -145,6 +145,7 @@ Pair * nextMap(HashMap * map) {
       map->current = pos;
       return map->buckets[pos];
     }
+    printf("%d\n", pos);
     pos = (pos + 1) % map->capacity;
   }
   
