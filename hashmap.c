@@ -138,6 +138,7 @@ Pair * nextMap(HashMap * map) {
   
   int pos = (map->current + 1) % map->capacity;
   if(pos > map->capacity) return NULL;
+  printf("%lu\n", map->capacity);
 
   while (pos != map->current) {
     if (map->buckets[pos] != NULL && map->buckets[pos]->key != NULL) {
