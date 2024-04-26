@@ -150,6 +150,5 @@ Pair * nextMap(HashMap * map) {
     //printf("%d\n", pos);
     pos = (pos + 1) % map->capacity;
   }
-  
-  //return NULL; 
+  return NULL; 
 }
