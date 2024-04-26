@@ -137,7 +137,7 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
   
   int pos = (map->current + 1) % map->capacity;
-  if((pos + 1) > map->capacity) return NULL;
+  if((pos + 1) >= map->capacity) return NULL;
   printf("%d\n", pos + 1);
   printf("%lu\n", map->capacity);
 
