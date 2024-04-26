@@ -136,8 +136,8 @@ Pair *nextMap(HashMap *map) {
       return map->buckets[pos];
     }
     if ((pos + 1) >= map->capacity)
+      map->current = pos;
       return NULL;
-    // printf("%d\n", pos);
     pos = (pos + 1) % map->capacity;
   }
   return NULL;

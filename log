@@ -220,3 +220,17 @@ Fri 26 Apr 2024 02:08:53 PM UTC:
  tests:  17|0
 total_score: 70/70
 f15511e
+Fri 26 Apr 2024 02:09:56 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:138:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  138 |     if ((pos + 1) >= map->capacity)
+      |     ^~
+hashmap.c:140:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  140 |       return NULL;
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5fd4aa2
